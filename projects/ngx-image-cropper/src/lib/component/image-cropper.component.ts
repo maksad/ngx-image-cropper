@@ -226,7 +226,7 @@ export class ImageCropperComponent implements OnChanges, OnInit {
       .catch((err) => this.loadImageError(err));
   }
 
-  private loadImageFromURL(url: string): void {
+  public loadImageFromURL(url: string): void {
     this.loadImageService
       .loadImageFromURL(url, this.settings)
       .then((res) => this.setLoadedImage(res))
